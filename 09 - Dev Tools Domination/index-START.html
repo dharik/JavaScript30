@@ -18,29 +18,41 @@
     }
 
     // Regular
+    console.log('hello');
 
     // Interpolated
-
+    console.log('formatting %s %d', 'asdf', 44.444)
+    
     // Styled
-
+    console.log('%c Hello world', 'font-size: 50px; color:blue');
     // warning!
-
+    console.warn('warning');
     // Error :|
-
+    console.error('error');
     // Info
-
+    console.info('info');
     // Testing
-
+    console.assert(1 === 2, '1 should equal 1');
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
-
+    const p = document.querySelector('p');
+    console.dir(p);
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log('some info');
+      console.groupEnd(`${dog.name}`);
+    })
     // counting
-
+    console.count('Hello world');
+    console.count('Hello earth');
+    console.count('Hello world');
     // timing
+    console.time('fetching data');
 
+    console.log('some wait');
+    console.timeEnd('fetching data');
   </script>
 </body>
 </html>
